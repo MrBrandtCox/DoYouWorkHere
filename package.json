@@ -1,0 +1,24 @@
+{
+  "name": "doyouworkhere",
+  "version": "1.0.0",
+  "description": "## **``Description``** _DoYouWorkHere_ is a command-line application that allows an employer to access a list of their employees, their roles, salaries, departments, managers, etc. The employer also has access to editing this employee database to stay organized within their company. </br></br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrBrandtCox/DoYouWorkHere.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrBrandtCox/DoYouWorkHere/issues"
+  },
+  "homepage": "https://github.com/MrBrandtCox/DoYouWorkHere#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.2.4"
+  }
+}
