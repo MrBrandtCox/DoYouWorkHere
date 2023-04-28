@@ -1,6 +1,7 @@
 const mysql = require("mysql2");
 const inquirer = require("inquirer"); //Tables show in terminal but I am getting an error message, maybe delete things from package.json & lock
-// I'm unable to use my tables in terminal until error is fixed..
+// I'm unable to use my tables in terminal until error is fixed.. 
+// line 22 in package.json, should i change mysql2 3.2.4 to 3.2.0??
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306, 
