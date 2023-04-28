@@ -78,8 +78,9 @@ const viewRole = () => {
 };
 
 const viewEmployees = () => {
-    //let query = "SELECT first_name, last_name, id, manager_id, FROM employee ORDER BY last_name ";
-    let query = "SELECT t1.first_name, t1.last_name, t2.first_name AS manager FROM employee t1 INNER JOIN employee t2 ON t1.manager_id = t2.id ";
+    //let query = "SELECT first_name, last_name, id, manager_id, FROM employee ORDER BY last_name "; This gives the manager id
+    // Query below gives the manager name
+    let query = "SELECT t1.first_name, t1.last_name, CONCAT(t2.first_name,' ', t2.last_name) AS manager FROM employee t1 INNER JOIN employee t2 ON t1.manager_id = t2.id ";
 
     connection.query(query, function(err, res) {
         if (err) throw(err);
