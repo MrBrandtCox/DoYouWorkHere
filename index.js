@@ -103,14 +103,14 @@ const addDepartment = () => {
         connection.query("INSERT INTO departments SET ?",
         {
             name: response.message,
-        },
+        }),
         start();
-    )}); //might need {} in place of []
-// inquirer.prompt, ask question- "What's the name of the dept you want to add?"
-// .then, connection.query, INSERT INTO departments where their answer is
-// To do that you can INSERT INTO departments SET ? =1st argument after connection.query,
-// then do , then as an object you pass it your answer from inquirer prompt
-// so it would be name: response.whatever the name of the prompt is
+    }); //might need {} in place of []
+    // inquirer.prompt, ask question- "What's the name of the dept you want to add?"
+    // .then, connection.query, INSERT INTO departments where their answer is
+    // To do that you can INSERT INTO departments SET ? =1st argument after connection.query,
+    // then do , then as an object you pass it your answer from inquirer prompt
+    // so it would be name: response.whatever the name of the prompt is
 };
 
 // ADD A ROLE
@@ -126,15 +126,14 @@ const addRole = () => {
         connection.query("INSERT INTO role SET ?",
         {
             name: response.message,
-        },
-        start(); // fix
-    )});
-        //might need {} in place of []
-// inquirer.prompt, ask question- "What's the name of the dept you want to add?"
-// .then, connection.query, INSERT INTO departments where their answer is
-// To do that you can INSERT INTO departments SET ? =1st argument after connection.query,
-// then do , then as an object you pass it your answer from inquirer prompt
-// so it would be name: response.whatever the name of the prompt is
+        }),
+        start();
+    });
+    // inquirer.prompt, ask question- "What's the name of the dept you want to add?"
+    // .then, connection.query, INSERT INTO departments where their answer is
+    // To do that you can INSERT INTO departments SET ? =1st argument after connection.query,
+    // then do , then as an object you pass it your answer from inquirer prompt
+    // so it would be name: response.whatever the name of the prompt is
 };
 
 const addEmployee = () => {
