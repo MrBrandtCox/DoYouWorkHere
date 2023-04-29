@@ -101,6 +101,10 @@ const addDepartment = () => {
         }
     ]).then( function (answer) {
         connection.query("INSERT INTO departments SET ?",
+        {
+            name: response.message,
+        },
+        start();
     )}); //might need {} in place of []
 // inquirer.prompt, ask question- "What's the name of the dept you want to add?"
 // .then, connection.query, INSERT INTO departments where their answer is
@@ -120,6 +124,10 @@ const addRole = () => {
         }
     ]).then( function (answer) {
         connection.query("INSERT INTO role SET ?",
+        {
+            name: response.message,
+        },
+        start(); // fix
     )});
         //might need {} in place of []
 // inquirer.prompt, ask question- "What's the name of the dept you want to add?"
