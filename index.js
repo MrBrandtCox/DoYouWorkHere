@@ -91,7 +91,22 @@ const viewEmployees = () => {
 };
 
 // ADD A DEPARTMENT
+const addDepartment = () => {
+// inquirer.prompt, ask question- "What's the name of the dept you want to add?"
+// .then, connection.query, INSERT INTO departments where their answer is
+// To do that you can INSERT INTO departments SET ? =1st argument after connection.query,
+// then do , then as an object you pass it your answer from inquirer prompt
+// so it would be name: response.whatever the name of the prompt is
+};
+
 // ADD A ROLE
+const addRole = () => {
+// inquirer.prompt, ask question- "What's the name of the dept you want to add?"
+// .then, connection.query, INSERT INTO departments where their answer is
+// To do that you can INSERT INTO departments SET ? =1st argument after connection.query,
+// then do , then as an object you pass it your answer from inquirer prompt
+// so it would be name: response.whatever the name of the prompt is
+};
 
 const addEmployee = () => {
 connection.query("SELECT * FROM role", function (err, res) {
