@@ -97,12 +97,14 @@ const addDepartment = () => {
     });
     inquirer.prompt([
         {
+            name: "departmentName",
+            type: "input",
             message: "What's the name of the department you'd like to add?"
         }
     ]).then( function (answer) {
         connection.query("INSERT INTO departments SET ?",
         {
-            name: response.message,
+            name: answer.departmentName
         }),
         start();
     }); //might need {} in place of []
@@ -120,8 +122,26 @@ const addRole = () => {
     });
     inquirer.prompt([
         {
-            message: "What's the name of the role you'd like to add?"
-        }
+            name: "roleName",
+            type: "input",
+            message: "What's the name of the role you'd like to add?",
+        },
+        {
+            name: "salary",
+            type: "input",
+            message: "What is this role's salary?",
+        },
+        {
+            name: "departmentId",
+            type: "list",
+            choices: function () {
+                return res.map((role) => ({
+                    name: department.name,
+                    value: department.id
+                }));
+            },
+            message: "What department does this new role belong to?",
+        },
     ]).then( function (answer) {
         connection.query("INSERT INTO role SET ?",
         {
