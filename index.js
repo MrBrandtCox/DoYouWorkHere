@@ -92,6 +92,16 @@ const viewEmployees = () => {
 
 // ADD A DEPARTMENT
 const addDepartment = () => {
+    connection.query(query, function (err, res) {
+        if (err) throw (err);
+    });
+    inquirer.prompt([
+        {
+            message: "What's the name of the department you'd like to add?"
+        }
+    ]).then( function (answer) {
+        connection.query("INSERT INTO departments SET ?",
+    )}); //might need {} in place of []
 // inquirer.prompt, ask question- "What's the name of the dept you want to add?"
 // .then, connection.query, INSERT INTO departments where their answer is
 // To do that you can INSERT INTO departments SET ? =1st argument after connection.query,
@@ -101,6 +111,17 @@ const addDepartment = () => {
 
 // ADD A ROLE
 const addRole = () => {
+    connection.query(query, function (err, res) {
+        if (err) throw (err);
+    });
+    inquirer.prompt([
+        {
+            message: "What's the name of the role you'd like to add?"
+        }
+    ]).then( function (answer) {
+        connection.query("INSERT INTO role SET ?",
+    )});
+        //might need {} in place of []
 // inquirer.prompt, ask question- "What's the name of the dept you want to add?"
 // .then, connection.query, INSERT INTO departments where their answer is
 // To do that you can INSERT INTO departments SET ? =1st argument after connection.query,
