@@ -10,6 +10,9 @@ const connection = mysql.createConnection({
     database: "employees_db",
 });
 
+connection.connect(function(error) {
+    if (error) throw error
+});
 function start() {
     inquirer.prompt({
         name: "action",
